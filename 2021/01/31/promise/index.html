@@ -79,11 +79,15 @@
 
 
 
-<meta property="og:type" content="website">
+<meta name="description" content="一. Promise1 为什么需要promise 需求  通过ajax请求id, 再根据id请求用户名, 再根据用户名获取email  回调地狱  在回调函数中嵌套回调 Promise解决了回调地狱 2 Promise的基本使用Promise是一个构造函数, 通过new关键字实例化对象  语法  1new Promise((resolve, reject)&#x3D;&gt;&amp;#123;&amp;#125;)">
+<meta property="og:type" content="article">
 <meta property="og:title" content="你钱掉了">
-<meta property="og:url" content="http://example.com/index.html">
+<meta property="og:url" content="http://example.com/2021/01/31/promise/index.html">
 <meta property="og:site_name" content="你钱掉了">
+<meta property="og:description" content="一. Promise1 为什么需要promise 需求  通过ajax请求id, 再根据id请求用户名, 再根据用户名获取email  回调地狱  在回调函数中嵌套回调 Promise解决了回调地狱 2 Promise的基本使用Promise是一个构造函数, 通过new关键字实例化对象  语法  1new Promise((resolve, reject)&#x3D;&gt;&amp;#123;&amp;#125;)">
 <meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2021-01-31T12:26:28.621Z">
+<meta property="article:modified_time" content="2020-12-23T14:10:45.343Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
 
@@ -115,13 +119,13 @@
 
 
 
-  <link rel="canonical" href="http://example.com/"/>
+  <link rel="canonical" href="http://example.com/2021/01/31/promise/"/>
 
 
 
 
 
-  <title>你钱掉了</title>
+  <title> | 你钱掉了</title>
   
 
 
@@ -140,8 +144,7 @@
     
   
 
-  <div class="container sidebar-position-left 
-  page-home">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -214,9 +217,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
 
   
 
@@ -246,9 +249,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2021/01/31/promise/" itemprop="url">Untitled</a></h1>
+          <h1 class="post-title" itemprop="name headline"></h1>
         
 
         <div class="post-meta">
@@ -298,9 +299,7 @@
       
 
       
-        
-          
-            <h1 id="一-Promise"><a href="#一-Promise" class="headerlink" title="一. Promise"></a>一. Promise</h1><h2 id="1-为什么需要promise"><a href="#1-为什么需要promise" class="headerlink" title="1 为什么需要promise"></a>1 为什么需要promise</h2><blockquote>
+        <h1 id="一-Promise"><a href="#一-Promise" class="headerlink" title="一. Promise"></a>一. Promise</h1><h2 id="1-为什么需要promise"><a href="#1-为什么需要promise" class="headerlink" title="1 为什么需要promise"></a>1 为什么需要promise</h2><blockquote>
 <p>需求</p>
 </blockquote>
 <p>通过ajax请求id, 再根据id请求用户名, 再根据用户名获取email</p>
@@ -396,8 +395,6 @@
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> p = <span class="keyword">new</span> <span class="built_in">Promise</span>(<span class="function">(<span class="params">resolve, reject</span>) =&gt;</span>&#123;</span><br><span class="line">  <span class="comment">// reject()</span></span><br><span class="line">  <span class="comment">// console.log(a)</span></span><br><span class="line">  <span class="keyword">throw</span> <span class="keyword">new</span> <span class="built_in">Error</span>(<span class="string">&#x27;出错了&#x27;</span>)</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line"><span class="comment">// 思考: catch中的参数函数在什么时候被执行?</span></span><br><span class="line"><span class="comment">// 1. 当promise的状态改为rejected时, 被执行</span></span><br><span class="line"><span class="comment">// 2. 当promise执行体中出现代码错误时, 被执行</span></span><br><span class="line">p.catch(<span class="function">(<span class="params">reason</span>) =&gt;</span> &#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">&#x27;失败&#x27;</span>, reason)</span><br><span class="line">&#125;)</span><br><span class="line"><span class="built_in">console</span>.log(p)</span><br></pre></td></tr></table></figure>
 
 <h2 id="4-用promise解决回调地狱"><a href="#4-用promise解决回调地狱" class="headerlink" title="4 用promise解决回调地狱"></a>4 用promise解决回调地狱</h2>
-          
-        
       
     </div>
     
@@ -414,144 +411,28 @@
       
 
       
-
-      
-
       
       
-        <div class="post-eof"></div>
+
       
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2020/12/13/hello-world/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="你钱掉了">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2020/12/13/hello-world/" itemprop="url">Hello World</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
             
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-12-13T19:43:25+08:00">
-                2020-12-13
-              </time>
+              <a href="/2020/12/13/hello-world/" rel="next" title="Hello World">
+                <i class="fa fa-chevron-left"></i> Hello World
+              </a>
             
+          </div>
 
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
             
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
+          </div>
         </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
       
 
       
-        
-          
-            <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
       
     </footer>
   </div>
@@ -561,10 +442,11 @@
   </article>
 
 
-    
-  </section>
 
-  
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -572,6 +454,10 @@
 
 
           
+
+  
+
+
 
         </div>
         
@@ -592,8 +478,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -651,6 +546,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B8%80-Promise"><span class="nav-number">1.</span> <span class="nav-text">一. Promise</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-%E4%B8%BA%E4%BB%80%E4%B9%88%E9%9C%80%E8%A6%81promise"><span class="nav-number">1.1.</span> <span class="nav-text">1 为什么需要promise</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-Promise%E7%9A%84%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8"><span class="nav-number">1.2.</span> <span class="nav-text">2 Promise的基本使用</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-promise%E7%9A%84%E7%8A%B6%E6%80%81"><span class="nav-number">1.2.1.</span> <span class="nav-text">1) promise的状态</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-promise%E7%8A%B6%E6%80%81%E7%9A%84%E6%94%B9%E5%8F%98"><span class="nav-number">1.2.2.</span> <span class="nav-text">2) promise状态的改变</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-promise%E7%9A%84%E7%BB%93%E6%9E%9C"><span class="nav-number">1.2.3.</span> <span class="nav-text">3) promise的结果</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-Promise%E7%9A%84%E6%96%B9%E6%B3%95"><span class="nav-number">1.3.</span> <span class="nav-text">3 Promise的方法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-then%E6%96%B9%E6%B3%95"><span class="nav-number">1.3.1.</span> <span class="nav-text">1) then方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-catch%E6%96%B9%E6%B3%95"><span class="nav-number">1.3.2.</span> <span class="nav-text">2) catch方法</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-%E7%94%A8promise%E8%A7%A3%E5%86%B3%E5%9B%9E%E8%B0%83%E5%9C%B0%E7%8B%B1"><span class="nav-number">1.4.</span> <span class="nav-text">4 用promise解决回调地狱</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -784,6 +695,10 @@
   
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 
